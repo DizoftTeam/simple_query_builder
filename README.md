@@ -20,13 +20,13 @@ import (
 )
 
 func main() {
-	query := sqb.NewQuery("users as u").
-		Select("u.name, u.email").
+  query := sqb.NewQuery("users as u").
+    Select("u.name, u.email").
     Where("and", "u.name = 'Ruslan'").
     Generate()
 
   // TODO: Here you can use generated query as you want
 
-	fmt.Printf("SQL: %v\n", query)
+  fmt.Printf("SQL: %v\n", query)
 }
 ```
